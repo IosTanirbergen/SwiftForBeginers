@@ -10,7 +10,15 @@ import UIKit
 
 
 class BookCell: UITableViewCell {
-    let coverImageView : UIImageView = {
+    var book : Book? {
+        didSet {
+            coverImageView.image = book?.image
+            authorLabel.text = book?.author
+            titleLabel.text = book?.title
+        }
+    }
+    
+   private let coverImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = .red
@@ -18,7 +26,7 @@ class BookCell: UITableViewCell {
         return image
     }()
     
-    let titleLabel : UILabel = {
+   private let titleLabel : UILabel = {
         let label = UILabel()
         label.text = "Tanirbergen Kaldibai IOS Developer graduate of IITU , is Aktau"
         label.backgroundColor = .red
@@ -26,7 +34,7 @@ class BookCell: UITableViewCell {
         return label
     }()
     
-    let authorLabel : UILabel = {
+   private let authorLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Tanirbergen Kaldibai IOS Developer graduate of IITU, is Aktau"
