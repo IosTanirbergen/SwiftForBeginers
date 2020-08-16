@@ -24,7 +24,9 @@ class ViewController: UITableViewController {
         let layout = UICollectionViewFlowLayout()
         let bookPageController = BookPagerController(collectionViewLayout: layout)
         let navigationController = UINavigationController(rootViewController: bookPageController )
-        present(navigationController, animated: true, completion:nil)
+       // present(navigationController, animated: true, completion:nil)
+        self.present(navigationController,animated: true,completion: nil)
+        
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
