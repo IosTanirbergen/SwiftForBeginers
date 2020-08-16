@@ -9,7 +9,7 @@ class BookPagerController : UICollectionViewController, UICollectionViewDelegate
         
         navigationItem.title = "Book"
         
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView?.register(PageCell.self, forCellWithReuseIdentifier: "cellid")
         
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.scrollDirection = .horizontal
@@ -35,12 +35,12 @@ class BookPagerController : UICollectionViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
       
         
-        if indexPath.item % 2 == 0 {
-            cell.backgroundColor = .red
-        }
-        else {
-          cell.backgroundColor = .green
-        }
+//        if indexPath.item % 2 == 0 {
+//            cell.backgroundColor = .red
+//        }
+//        else {
+//          cell.backgroundColor = .green
+//        }
         return cell
     }
 }
