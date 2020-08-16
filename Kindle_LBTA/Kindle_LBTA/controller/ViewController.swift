@@ -19,6 +19,13 @@ class ViewController: UITableViewController {
         setupBooks()
         
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let layout = UICollectionViewFlowLayout()
+        let bookPageController = BookPagerController(collectionViewLayout: layout)
+        let navigationController = UINavigationController(rootViewController: bookPageController )
+        present(navigationController, animated: true, completion:nil)
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
@@ -27,6 +34,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath) as! BookCell
         let book = books?[indexPath.row]
         cell.book = book
+        
 
         return cell
     }

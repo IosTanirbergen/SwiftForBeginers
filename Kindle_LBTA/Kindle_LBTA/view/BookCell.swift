@@ -21,7 +21,6 @@ class BookCell: UITableViewCell {
    private let coverImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .red
         image.image = #imageLiteral(resourceName: "Abay")
         return image
     }()
@@ -29,7 +28,6 @@ class BookCell: UITableViewCell {
    private let titleLabel : UILabel = {
         let label = UILabel()
         label.text = "Tanirbergen Kaldibai IOS Developer graduate of IITU , is Aktau"
-        label.backgroundColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -38,7 +36,6 @@ class BookCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Tanirbergen Kaldibai IOS Developer graduate of IITU, is Aktau"
-        label.backgroundColor = .green
         return label
         
     }()
