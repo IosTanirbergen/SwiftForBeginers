@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C47DAC8824ECE2A20034ED61 /* BookPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2D58F24DFDFA6005CB70E /* BookPageController.swift */; };
+		C47DAC8924ECE2AC0034ED61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDCB24DAA53600CF438F /* ViewController.swift */; };
 		C480385624E90AC700C4C0EB /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480385524E90AC700C4C0EB /* PageCell.swift */; };
 		C490FDC824DAA53600CF438F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDC724DAA53600CF438F /* AppDelegate.swift */; };
 		C490FDCA24DAA53600CF438F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDC924DAA53600CF438F /* SceneDelegate.swift */; };
 		C490FDD424DAA53700CF438F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C490FDD224DAA53700CF438F /* LaunchScreen.storyboard */; };
 		C490FDE124DAEDA300CF438F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C490FDD024DAA53700CF438F /* Assets.xcassets */; };
-		C4A2D59424DFE0FE005CB70E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDCB24DAA53600CF438F /* ViewController.swift */; };
-		C4A2D59524DFE104005CB70E /* BookPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2D58F24DFDFA6005CB70E /* BookPageController.swift */; };
 		C4A2D59624DFE108005CB70E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDDC24DAA9A800CF438F /* Models.swift */; };
 		C4A2D59724DFE10D005CB70E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490FDE224DAEE5C00CF438F /* BookCell.swift */; };
 /* End PBXBuildFile section */
@@ -179,12 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A2D59724DFE10D005CB70E /* BookCell.swift in Sources */,
-				C4A2D59424DFE0FE005CB70E /* ViewController.swift in Sources */,
 				C490FDC824DAA53600CF438F /* AppDelegate.swift in Sources */,
 				C490FDCA24DAA53600CF438F /* SceneDelegate.swift in Sources */,
 				C4A2D59624DFE108005CB70E /* Models.swift in Sources */,
-				C4A2D59524DFE104005CB70E /* BookPageController.swift in Sources */,
+				C47DAC8924ECE2AC0034ED61 /* ViewController.swift in Sources */,
 				C480385624E90AC700C4C0EB /* PageCell.swift in Sources */,
+				C47DAC8824ECE2A20034ED61 /* BookPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
