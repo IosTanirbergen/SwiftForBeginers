@@ -59,12 +59,13 @@ class ViewController: UITableViewController {
     
     
     func setupBooks() {
-        let book = Book(title: "IosCoding", author: "Tanirbergen", pages: [
-            Page(number: 1, text: "text for the first page")
+        let book = Book(title: "Abay", author: "Tanirbergen", pages: [
+            Page(number: 1, text: "FirstPage"),
+            Page(number: 2, text: "secong page")
         ],image: #imageLiteral(resourceName: "Abay"))
         
-        let book1 = Book(title: "So i'm good!", author: "Tanirbergen", pages: [
-            Page(number: 1, text: "text for the first page")
+        let book1 = Book(title: "Akhmet", author: "Tanirbergen", pages: [
+            Page(number: 1, text: "FirstPage")
         ],image: #imageLiteral(resourceName: "Ахмет"))
         self.books = [book,book1]
     }

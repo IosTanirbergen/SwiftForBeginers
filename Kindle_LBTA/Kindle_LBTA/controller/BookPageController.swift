@@ -37,11 +37,15 @@ class BookPagerController : UICollectionViewController, UICollectionViewDelegate
 //    }
    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return book?.pages.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
+        let pageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! PageCell
+        
+        let page = book?.pages[indexPath.item]
+        
+        pageCell.text.text = page?.text
       
         
 //        if indexPath.item % 2 == 0 {
@@ -50,6 +54,6 @@ class BookPagerController : UICollectionViewController, UICollectionViewDelegate
 //        else {
 //          cell.backgroundColor = .green
 //        }
-        return cell
+        return pageCell
     }
 }
