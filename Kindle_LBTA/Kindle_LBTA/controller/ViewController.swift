@@ -15,10 +15,40 @@ class ViewController: UITableViewController {
         navigationItem.title = "Tanirbergen"
         tableView.register(BookCell.self, forCellReuseIdentifier: "cellid")
         tableView.tableFooterView = UIView()
-        
+        fetchBooks()
         setupBooks()
         
     }
+    
+    func fetchBooks() {
+        print("fetching books...")
+        if  let url =  URL(string: "https://github.com/bvaughn/infinite-list-reflow-examples/blob/master/books.json") {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("error JSON Books!",error)
+                    return
+                }
+                guard let data = data else {return}
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                    print(json)
+                    
+                    guard let bookDictionaries = json as? [[String : Any]] else {return}
+                    
+                    for bookDictionary in bookDictionaries {
+                        let title = bookDictionary["title"]
+                        print(title)
+                    }
+                    
+                } catch let jsonError {
+                    print("failed to parse JSON properly : ",jsonError)
+                }
+                
+            }.resume()
+
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedBook = self.books?[indexPath.row]
