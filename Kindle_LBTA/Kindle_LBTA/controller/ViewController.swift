@@ -22,7 +22,7 @@ class ViewController: UITableViewController {
     
     func fetchBooks() {
         print("fetching books...")
-        if  let url =  URL(string: "https://github.com/bvaughn/infinite-list-reflow-examples/blob/master/books.json") {
+        if  let url =  URL(string: "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/kindle.json") {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     print("error JSON Books!",error)
@@ -34,10 +34,22 @@ class ViewController: UITableViewController {
                     print(json)
                     
                     guard let bookDictionaries = json as? [[String : Any]] else {return}
-                    
+
                     for bookDictionary in bookDictionaries {
-                        let title = bookDictionary["title"]
-                        print(title)
+                        
+                        let book = Book(dictionary: bookDictionary)
+                        self.books?.append(book)
+//                        if let title = bookDictionary["title"] as? String,
+//                           let author = bookDictionary["author"] as? String{
+//
+//                            let book = Book(title: title, author: author, pages: [], image: #imageLiteral(resourceName: "Abay"))
+//
+//                            self.books?.append(book)
+//                        }
+                     
+                        self.tableView.reloadData()
+                        
+                        
                     }
                     
                 } catch let jsonError {
